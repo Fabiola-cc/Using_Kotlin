@@ -4,7 +4,7 @@
 * Laboratorio #4
 *
 * Fabiola Contreras 22787
-* 17/08/2023
+* 20/08/2023
  */
 
 package com.example.lab04
@@ -43,6 +43,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.lab04.ui.theme.Lab04Theme
 import coil.compose.AsyncImage
@@ -83,8 +84,8 @@ fun CustomItem(image: String, title: String) {
                 model = image,
                 contentDescription = null,
                 modifier = Modifier
-                    .width(55.dp)
-                    .height(55.dp)
+                    .width(75.dp)
+                    .height(75.dp)
             )
             Text(
                 text = title,
@@ -110,6 +111,12 @@ fun MainPage(modifier: Modifier = Modifier) {
             .padding(50.dp, 10.dp)
             .clip(RoundedCornerShape(3.dp))
     ) {
+
+        Text(
+            fontFamily = FontFamily.Cursive,
+            textAlign = TextAlign.Center,
+            text = "Healthy Living App (●'◡'●)\n"
+        )
 
         OutlinedTextField(
             value = inputText,
